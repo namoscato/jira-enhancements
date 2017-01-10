@@ -1,0 +1,23 @@
+{
+  "name": "JIRA Enhancements",
+  "version": "0.1.0",
+  "manifest_version": 2,
+  "description": "Adds some enhancements to JIRA's user interface",
+  "homepage_url": "https://github.com/namoscato/jira-enhancements",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.atlassian.net/secure/RapidBoard.jspa*"],
+      "js": [
+        "src/script.js"
+      ]
+    }
+  ],
+  "permissions": [
+    "tabs"
+  ]
+}
