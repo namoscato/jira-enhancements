@@ -7,21 +7,21 @@
 
     elementModeTools.parentNode.insertBefore(elementOutput, elementModeTools.nextSibling);
 
-    document.addEventListener('mouseup', (e) => {
-        if (!e.shiftKey) {
-            elementOutput.textContent = '';
-            return;
-        }
+    function renderPointsText(points) {
+        elementOutput.textContent = points === false ? '' : `${points} points selected`;
+    }
 
+    document.addEventListener('mouseup', () => {
         window.setTimeout(() => {
-            const selectedCards = Array.prototype.slice.call(document.getElementsByClassName('ghx-backlog-card ghx-selected'));
+            let points = 0;
+            let selectedCards = document.getElementsByClassName('ghx-backlog-card ghx-selected');
 
             if (selectedCards.length < 2) {
-                elementOutput.textContent = '';
+                renderPointsText(false);
                 return;
             }
 
-            let points = 0;
+            selectedCards = Array.prototype.slice.call(selectedCards);
 
             selectedCards.forEach((card) => {
                 const point = Number(card.querySelector('.ghx-statistic-badge').textContent);
@@ -33,7 +33,7 @@
                 points += point;
             });
 
-            elementOutput.textContent = `${points} points selected`;
+            renderPointsText(points);
         }, 200);
     }, false);
 })();
