@@ -2,7 +2,9 @@
     const elementModeTools = document.getElementById('ghx-modes-tools');
     const elementOutput = document.createElement('div');
 
+    elementOutput.style.color = '#707070';
     elementOutput.style.float = 'right';
+    elementOutput.style.marginRight = '10px';
     elementOutput.style.padding = '4px 0';
 
     elementModeTools.parentNode.insertBefore(elementOutput, elementModeTools.nextSibling);

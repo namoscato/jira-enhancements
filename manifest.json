@@ -13,7 +13,8 @@
     {
       "matches": ["https://*.atlassian.net/secure/RapidBoard.jspa*"],
       "js": [
-        "src/script.js"
+        "src/story-point-summation.js",
+        "src/issue-status-width-fix.js"
       ]
     }
   ],
