@@ -11,10 +11,22 @@
   },
   "content_scripts": [
     {
-      "matches": ["https://*.atlassian.net/secure/RapidBoard.jspa*"],
+      "matches": [
+        "https://*.atlassian.net/secure/RapidBoard.jspa*"
+      ],
       "js": [
-        "src/story-point-summation.js",
-        "src/swimline-header-expander-fix.js"
+        "src/story-point-summation.js"
+      ],
+      "css": [
+        "src/hide-copy-issue-link.css"
+      ]
+    },
+    {
+      "matches": [
+        "https://*.atlassian.net/browse/*"
+      ],
+      "js": [
+        "src/old-issue-view.js"
       ]
     }
   ],
