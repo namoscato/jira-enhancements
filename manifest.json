@@ -17,9 +17,7 @@
       "js": [
         "src/story-point-summation.js"
       ],
-      "css": [
-        "src/hide-copy-issue-link.css"
-      ]
+      "css": []
     },
     {
       "matches": [
