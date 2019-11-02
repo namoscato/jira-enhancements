@@ -11,7 +11,7 @@
     "url": "git://github.com/namoscato/jira-enhancements.git"
   },
   "devDependencies": {
-    "eslint": "^3.12.2",
+    "eslint": "^6.6.0",
     "eslint-config-airbnb-base": "^11.0.0",
     "eslint-plugin-import": "^2.2.0"
   }
